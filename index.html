@@ -10,8 +10,8 @@
 	<button onclick="postMessage();">test</button>
 	<script>
 		const postMessage = () => {
-			window.parent.postMessage({ value: 'localhost' });
-			window.parent.postMessage({ value: 'dev.everdays' });
+			window.parent.postMessage({ value: 'localhost' }, '*');
+			window.parent.postMessage({ value: 'dev.everdays' }, '*');
 		console.log('message postedddd');
 	};
 	</script>
