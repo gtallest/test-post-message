@@ -7,9 +7,12 @@
 </head>
 <body>
 	<h3>Test Post Message</h3>
+	<button onclick="postMessage();">test</button>
 	<script>
-		window.parent.postMessage({ value: 'test' }, 'http://localhost:1350');
+		const postMessage = () => {
+			window.parent.postMessage({ value: 'test' }, 'http://localhost:1350');
 		console.log('message postedddd');
+	};
 	</script>
 </body>
 </html>
