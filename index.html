@@ -10,8 +10,12 @@
 	<button onclick="postMessage();">test</button>
 	<script>
 		const postMessage = () => {
-			window.parent.postMessage({ value: 'localhost' }, '*');
-			window.parent.postMessage({ value: 'dev.everdays' }, '*');
+			window.parent.postMessage({ value: 'localhost origin' }, 'http://localhost:1350');
+			window.parent.postMessage({ value: 'dev.everdays origin' }, 'https://dev.everdays.com');
+			window.parent.postMessage({ value: 'no origin local' });
+			window.parent.postMessage({ value: 'no origin dev' });
+			window.parent.postMessage({ value: 'localhost *' }, '*');
+			window.parent.postMessage({ value: 'dev.everdays *' }, '*');
 		console.log('message postedddd');
 	};
 	</script>
